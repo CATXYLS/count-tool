@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计数小工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>计数小工具</h1>
+    <!-- 添加计数器的表单 -->
+    <div class="form">
+        <input type="text" id="counter-title" placeholder="输入自定义内容" required>
+        <input type="number" id="counter-quantity" placeholder="输入数量" min="1" required>
+        <button id="add-counter">添加计数器</button>
+    </div>
+    <!-- 计数器容器 -->
+    <div id="counters"></div>
+</div>
+<!-- 悬浮窗 -->
+<div id="quantity-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>数量列表</h3>
+        <ul id="quantity-items"></ul>
+        <p>总数: <span id="total-quantity">0</span></p>
+        <!-- 算术式部分 -->
+        <div class="arithmetic-section">
+            <input type="text" id="arithmetic-expression" readonly>
+            <button id="copy-arithmetic">复制算术式</button>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
